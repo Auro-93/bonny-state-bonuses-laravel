@@ -1,0 +1,18 @@
+/*****VARIABLES******/
+
+$bg: #211F2F;
+$card: #25283B;
+$green: #047857;
+$green_glass: rgba(4, 120, 87, 0.6);
+$dark_green: #031e03;
+$red: rgba(163, 15, 15, 1);
+$white: white;
+
+
+/*****MIXINS*******/
+
+// neon-shadow
+@mixin neon_shadow($color){
+    box-shadow: 0 0 30px  $color;
+}
+

@@ -1,0 +1,23 @@
+@import "utilities";
+
+.add-btn{
+    background-color: $green;
+    color: $white;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    transition: all 0.2s linear;
+
+    &:hover, &:active{
+        filter: saturate(150%);
+        @include neon_shadow($green);
+    }
+}
+
+.table-btn{
+    transition: all 0.2s linear;
+    &:hover, &:active{
+        filter: saturate(150%);
+    }
+}
+

@@ -1,0 +1,142 @@
+@import "utilities";
+
+
+/*NAVBAR*/
+
+.navbar{
+    width: 100%;
+    
+
+    .logo{
+        h1 a{
+            font-family: 'Square Peg', cursive;
+            margin-left: -1.5rem;
+            color: $dark_green;
+            font-weight: 700;
+            font-size: 2rem;
+    
+            span{
+                font-size: 1.6rem;
+            }
+        }
+    
+        img{
+            width: 3rem;
+            height: 3rem;
+            margin-right: 0.6rem;
+            border-radius: 100%;
+        }
+    }
+
+    #menu-bar {
+        width: 45px;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        .bar{
+            height: 5px;
+            width: 100%;
+            background-color: $white;
+            display: block;
+            border-radius: 5px;
+            transition: 0.3s ease;
+
+        }
+      } 
+      
+      .nav-items{
+        font-size: 0.7rem;
+        li{
+          margin: 0 1rem;
+        }
+    
+    }
+}
+
+
+.sidebar{
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 0 1rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background-color: $green_glass;
+    backdrop-filter: blur(5px);
+    transform: translateX(-500px);
+    transition: transform 0.3s linear;
+
+    &.open{
+        transform: translateX(0);
+    }
+
+    .nav-items{
+      li{
+        margin: 0.6rem 0;
+      }
+    }
+
+} 
+
+.nav-items{
+
+  li{
+      border-radius: 20px;
+      transition: all 0.3s linear;
+      a{
+          display: inline-block;
+          height: 100%;
+          width: 100%;
+          padding: 1rem;
+          transition: all 0.3s linear;
+        
+      }
+      &:hover, &:active{
+          background-color: $red;
+          @include neon_shadow($red);
+          text-align: center;
+      }
+  }
+
+} 
+
+
+
+//HAMBURGER ICON UTILITIES
+
+  #bar1 {
+    transform: translateY(-4px);
+  }
+  
+  #bar3 {
+    transform: translateY(4px);
+  }
+  
+.change {
+    display: block;
+  }
+  
+  .change .bar {
+    background-color: white;
+  }
+  
+  .change #bar1 {
+    transform: translateY(4px) rotateZ(-45deg);
+  }
+  
+  .change #bar2 {
+    opacity: 0;
+  }
+  
+  .change #bar3 {
+    transform: translateY(-6px) rotateZ(45deg);
+  }
+  
+
+
+

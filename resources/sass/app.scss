@@ -1,0 +1,109 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import "partials/utilities";
+@import "partials/navigation";
+@import "partials/overview";
+@import "partials/tables";
+@import "partials/error-page";
+@import "partials/form";
+
+
+/*GLOBAL STYLES*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: $bg;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* CUSTOM SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px $white;
+    border-radius: 20px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $red;
+    border-radius: 20px;
+  }
+  
+  //For Firefox
+  
+  html {
+    scrollbar-color: $red $white; /* thumb and track color */
+    scrollbar-width: thin;
+  }
+
+.custom-container{
+    width: 100%;
+    padding: 4rem;
+}
+
+.error, .success{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.error{
+    margin: 0.5rem 0;
+    position: relative;
+
+    .close-icon{
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+}
+
+
+.success{
+    height: auto;
+    opacity: 1;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+
+.success-not-full-width{
+    width: 20%;
+}
+
+@keyframes disappear{
+    0% {
+        opacity: 1;
+        height: auto;
+    }
+    50%{
+        opacity: 0;
+        height: auto;
+    }
+    100%{
+        opacity: 0;
+        height: 0;
+
+    }
+}
+

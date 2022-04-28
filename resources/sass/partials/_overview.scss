@@ -1,0 +1,95 @@
+@import "utilities";
+
+.stats-desc{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    border-right: 3px solid $green;
+    border-bottom: 3px solid $green;
+    border-bottom-right-radius: 10px;
+    color: $green;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.stats-cards{
+    .stats-card{
+        background-color: $card;
+        padding: 3rem;
+        margin: 0 1rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+        .stats-card-num{
+            font-size: 3rem;
+            border-radius: 100%;
+            margin: 2rem 0;
+        }
+
+        .stats-card-cat{
+            padding: 0.5rem;
+            border-radius: 10px;
+            min-width: 5rem;
+        }
+    }
+
+    .max-stats-card{
+        @include neon_shadow($green);
+        .stats-card-cat{
+            background-color: $green;
+        }
+
+    } 
+    .min-stats-card{
+        @include neon_shadow($red);
+        .stats-card-cat{
+            background-color: $red;
+        }
+
+    } 
+    .total-stats-card{
+        @include neon_shadow($white);
+        .stats-card-cat{
+            background-color: $white;
+        }
+    } 
+}
+
+
+.latest-records{
+    .latest-bonuses, .latest-cat{
+        flex: 0.5;
+        margin: 4rem 1rem 0;
+        position: relative;
+    }
+    ul{
+        padding: 1rem 0;
+        li{
+            padding: 0.6rem 3rem;
+            text-align: center;
+            margin: 0.5rem 0;
+            background-color: $green_glass;
+            border-radius: 10px;
+            
+        }
+    }
+
+    .view-more-btn{
+        position: absolute;
+        top: 0;
+        right: -1rem;
+        font-size: 0.8rem;
+        border-radius: 100%;
+        width: 8rem;
+        height: 8rem;
+        background-color: $green;
+        transition: all 0.2s linear;
+
+        &:hover, &:active{
+            @include neon_shadow($green);
+        }
+    }
+   
+}
