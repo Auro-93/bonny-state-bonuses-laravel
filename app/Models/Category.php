@@ -10,8 +10,9 @@ class Category extends Model
     use HasFactory;
 
     public $timestamps = false;
+  
 
-    public $fillable = [
+    protected $fillable = [
         'name', 
         'saved_minutes', 
     ];

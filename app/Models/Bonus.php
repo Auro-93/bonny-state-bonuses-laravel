@@ -11,7 +11,7 @@ class Bonus extends Model
 
     public $timestamps = false;
 
-    public $fillable = [
+    protected $fillable = [
         'name', 
         'category_id', 
         'quantity_sold', 
