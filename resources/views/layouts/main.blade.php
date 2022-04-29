@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&family=Square+Peg&display=swap"
         rel="stylesheet">
 
-    <link href="{{secure_asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{asset('css/app.css') }}" rel="stylesheet">
     <title>@yield("title")</title>
 
 </head>
@@ -31,7 +31,7 @@
 
     @yield("content")
 
-    <script src="{{ secure_asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 
 
 
