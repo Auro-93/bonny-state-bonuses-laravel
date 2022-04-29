@@ -12,8 +12,10 @@ hamburgerIcon.addEventListener("click", (e) => {
     e.currentTarget.classList.toggle("change");
     if (sidebar.classList.contains("open")) {
         sidebar.classList.remove("open");
+        document.body.style.overflowY = "auto";
     } else {
         sidebar.classList.add("open");
+        document.body.style.overflowY = "hidden";
     }
 });
 

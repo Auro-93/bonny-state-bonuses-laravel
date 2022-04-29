@@ -10,6 +10,7 @@
 @import "partials/form";
 
 
+
 /*GLOBAL STYLES*/
 
 *{
@@ -24,6 +25,7 @@ body{
     min-height: 100vh;
     background-color: $bg;
     font-family: 'Nunito', sans-serif;
+    
 }
 
 /* CUSTOM SCROLLBAR */
@@ -51,9 +53,19 @@ body{
     scrollbar-width: thin;
   }
 
+
+
 .custom-container{
     width: 100%;
-    padding: 4rem;
+   padding: 4rem 1rem;
+    min-height: 100vh;
+    @include md{
+        padding: 4rem 2rem
+
+    }
+    @include xl{
+        padding: 4rem;
+    }
 }
 
 .error, .success{
@@ -88,7 +100,7 @@ body{
 }
 
 .success-not-full-width{
-    width: 20%;
+    min-width: 15rem;
 }
 
 @keyframes disappear{

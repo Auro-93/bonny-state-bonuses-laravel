@@ -1,5 +1,30 @@
 @import "utilities";
 
+
+
+.overflow-table{
+   overflow-x: auto;
+    &::-webkit-scrollbar {
+        height: 5px;
+       }
+     
+       &::-webkit-scrollbar-thumb {
+        background-color: $red;
+        border-radius: 3px;
+      
+       }
+       &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px $bg;
+        border-radius: 20px;
+      }
+
+      table{
+          margin: 2rem 0;
+      }
+
+}
+ 
+
 .add-btn{
     background-color: $green;
     color: $white;

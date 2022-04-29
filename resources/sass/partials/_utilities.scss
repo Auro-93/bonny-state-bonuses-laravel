@@ -16,3 +16,53 @@ $white: white;
     box-shadow: 0 0 30px  $color;
 }
 
+//media queries
+
+@mixin xxs {
+    @media screen and (min-width: 300px) {
+      @content;
+    }
+  }
+  
+  @mixin xs {
+    @media screen and (min-width: 400px) {
+      @content;
+    }
+  }
+
+  @mixin s-max {
+    @media screen and (max-width: 576px) {
+      @content;
+    }
+  }
+
+  @mixin s {
+    @media screen and (min-width: 576px) {
+      @content;
+    }
+  }
+  
+  @mixin md {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  }
+  
+  @mixin lg {
+    @media screen and (min-width: 1000px) {
+      @content;
+    }
+  }
+  
+  @mixin xl {
+    @media screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+  @mixin xxl {
+    @media screen and (min-width: 1400px) {
+      @content;
+    }
+  }
+  
+

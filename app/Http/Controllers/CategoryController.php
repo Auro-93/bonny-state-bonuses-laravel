@@ -19,6 +19,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
+      
         $categories = Category::paginate(4);
         return view("pages/categories", compact("categories"));
     }
@@ -94,7 +95,8 @@ class CategoryController extends Controller
     {
         $category = Category::find($id);
         $category->delete();
-        return redirect()->back()->with('success','Category Successfully Deleted');
+        return redirect()->route('categories.index')->with('success','Category Successfully Deleted');
+       
     }
 
     public function validateReq(Request $request, $id = NULL){

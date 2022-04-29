@@ -30,7 +30,7 @@
                             Name:
                         </label>
                         <input id="name" name="name" type="text" value="{{ old('name') }}" placeholder="Category Name..."
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                     </div>
                     <div class="mb-6">
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="saved_minutes">
@@ -38,7 +38,7 @@
                         </label>
                         <input id="saved_minutes" name="saved_minutes" type="number" min=1
                             value="{{ old('saved_minutes') }}" placeholder="Category Saved Minutes..."
-                            class="shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            class="shadow  border rounded w-full py-2 px-3 mr-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                     </div>
 
                     <button

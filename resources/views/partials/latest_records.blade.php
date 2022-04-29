@@ -1,4 +1,4 @@
-<div class="latest-records flex justify-center">
+<div class="latest-records flex flex-col lg:flex-row justify-center">
     @if (count($latest_bonuses) > 0)
         <div class="latest-bonuses mt-12">
             <div class="stats-desc">LATEST BONUSES SOLD</div>

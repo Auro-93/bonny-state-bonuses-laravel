@@ -1,1 +1,1 @@
-<a class="add-btn p-6" href="{{ route('bonuses.create') }}">ADD BONUS + </a>
+<a class="flex justify-center items-center add-btn p-6 my-4" href="{{ route('bonuses.create') }}">ADD BONUS + </a>

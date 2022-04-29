@@ -39,21 +39,21 @@
                             Category:
                         </label>
                         <select name="category_id"
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            class="shadow  border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                             <option value="" selected disabled>Select bonus category...</option>
                             @foreach ($categories as $category)
                                 <option value={{ $category->id }}>{{ ucfirst($category->name) }}</option>
                             @endforeach
                         </select>
                     </div>
-                    <div class="flex items-center">
+                    <div class="flex flex-col  md:flex-row items-center">
                         <div class="mb-6 w-full">
                             <label class="block text-gray-700 text-sm font-bold mb-2" for="quantity_sold">
                                 Quantity Sold:
                             </label>
                             <input id="quantity_sold" name="quantity_sold" type="number"
                                 value="{{ old('quantity_sold') }}" min=1 placeholder="Quantity Sold..."
-                                class="shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                class="shadow  border rounded w-full py-2 px-3 mr-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                         </div>
                         <div class="mb-6 w-full">
                             <label class="block text-gray-700 text-sm font-bold mb-2" for="quantity_sold">
@@ -61,7 +61,7 @@
                             </label>
                             <input id="sold_at" name="sold_at" type="date" value="{{ old('sold_at') }}" min="2022-01-01"
                                 max="2022-12-31"
-                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                class="shadow  border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                         </div>
 
                     </div>

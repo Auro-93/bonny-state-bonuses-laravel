@@ -8,15 +8,15 @@
 @section('content')
     <div class="custom-container flex flex-col">
         <div class="flex items-center justify-between">
+            @include('partials.create_cat_btn')
             @if (session()->has('success'))
                 <div class="success bg-emerald-200 rounded text-center success-not-full-width">
                     {{ session()->get('success') }}
                 </div>
             @endif
-            @include('partials.create_cat_btn')
         </div>
         @if (count($categories) > 0)
-            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <div class="relative overflow-table shadow-md sm:rounded-lg">
                 @include('partials.categories_table')
             </div>
         @else

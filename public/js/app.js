@@ -2072,8 +2072,10 @@ hamburgerIcon.addEventListener("click", function (e) {
 
   if (sidebar.classList.contains("open")) {
     sidebar.classList.remove("open");
+    document.body.style.overflowY = "auto";
   } else {
     sidebar.classList.add("open");
+    document.body.style.overflowY = "hidden";
   }
 });
 container.addEventListener("click", function () {

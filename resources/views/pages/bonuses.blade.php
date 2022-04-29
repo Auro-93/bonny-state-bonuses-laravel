@@ -6,24 +6,24 @@
 
 @section('content')
     <div class="custom-container flex flex-col">
-        @if (session()->has('success'))
-            <div class="success bg-emerald-200 rounded text-center success-not-full-width">
-                {{ session()->get('success') }}
-            </div>
-        @endif
 
-        <div class="flex items-center justify-between">
+        <div class="flex items-center justify-center">
                 @include('partials.filters')
-                <a class=" bg-stone-500 hover:bg-stone-700 text-white font-bold  py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                    href="{{ route('bonuses.index') }}">
-                    All
-                </a>
-            @include('partials.create_bonus_btn')
         </div>
+
+        <div class = "flex items-center justify-between">
+            @include('partials.create_bonus_btn')
+            @if (session()->has('success'))
+                <div class="success bg-emerald-200 rounded text-center success-not-full-width">
+                    {{ session()->get('success') }}
+                </div>
+            @endif
+        </div>
+      
 
 
         @if (count($bonuses) > 0)
-            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <div class="relative overflow-table shadow-md sm:rounded-lg">
                 @include('partials/bonuses_table')
             </div>
         @else

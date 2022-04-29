@@ -10,17 +10,46 @@
     border-bottom: 3px solid $green;
     border-bottom-right-radius: 10px;
     color: $green;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     font-weight: 600;
+
+    @include lg{
+        font-size: 1.2rem;
+    }
+
+   
 }
 
 .stats-cards{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    grid-gap: 2rem;
+
+    @include lg{
+        grid-template-columns: repeat(3, 1fr);
+    }
     .stats-card{
+        text-align: center;
         background-color: $card;
         padding: 3rem;
-        margin: 0 1rem;
         border-radius: 10px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        width: 100%;
+
+        @include s{
+            width: 70%;
+        }
+
+        @include md{
+            width: 50%;
+        }
+
+        @include lg{
+            width: 100%;
+        }
+
+
 
         .stats-card-num{
             font-size: 3rem;
@@ -78,14 +107,36 @@
 
     .view-more-btn{
         position: absolute;
-        top: 0;
+        top: 2.5rem;
         right: -1rem;
-        font-size: 0.8rem;
+        font-size: 0.6rem;
         border-radius: 100%;
-        width: 8rem;
-        height: 8rem;
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: $green;
         transition: all 0.2s linear;
+
+        @include xs{
+            top: 0;
+            width: 5rem;
+            height: 5rem;
+         
+        }
+
+        @include md{
+            width: 6rem;
+            height: 6rem;
+            font-size: 0.8rem;
+         
+        }
+
+        @include xl{
+            width: 8rem;
+            height: 8rem;
+        }
 
         &:hover, &:active{
             @include neon_shadow($green);

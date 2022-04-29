@@ -125,7 +125,7 @@ class BonusController extends Controller
     {
         $bonus = Bonus::find($id);
         $bonus->delete();
-        return redirect()->back()->with('success','Bonus Successfully Deleted');
+        return redirect()->route('bonuses.index')->with('success','Bonus Successfully Deleted');
     }
 
     public function validateReq(Request $request){

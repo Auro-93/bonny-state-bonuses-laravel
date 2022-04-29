@@ -1,6 +1,6 @@
 <div class="stats-desc mb-12"> MIN/MAX (PER CATEGORY) AND TOTAL SAVED MINUTES</div>
 
-<div class="stats-cards flex items-center justify-between">
+<div class="stats-cards ">
 
     <div class="stats-card max-stats-card w-full flex flex-col items-center justify-center">
         <h6 class="text-gray-400 stats-card-label">
