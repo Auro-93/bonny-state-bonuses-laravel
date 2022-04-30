@@ -45,7 +45,7 @@ class BonusController extends Controller
             $bonuses->whereDate('sold_at', '<=', $to);
         }
 
-        $bonuses = $bonuses->paginate(4);
+        $bonuses = $bonuses->simplePaginate(4);
 
 
         return view("pages/bonuses", compact('bonuses', 'categories'));

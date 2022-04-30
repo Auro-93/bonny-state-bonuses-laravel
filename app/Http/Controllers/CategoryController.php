@@ -21,7 +21,7 @@ class CategoryController extends Controller
     {
       
         //GET ALL CATEGORIES 
-        $categories = Category::paginate(4);
+        $categories = Category::simplePaginate(4);
         return view("pages/categories", compact("categories"));
     }
 

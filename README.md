@@ -1,64 +1,189 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
-
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+
+  <p align="center">
+    <a href="https://github.com/Auro-93/bonny-state-bonuses-laravel">
+        <img src="public/images/favicon.png" alt="Logo">
+    </a>
+   </p>
+  
+  <h3 align="center">Bonny State Bonuses</h3>
+
+  <p align="center">
+   
+    A project developed in Laravel and MySQL that includes two functionalities: a REST API and a web app.
+    Bonny is a fictional startup whose aim is to make state bonuses more accessible to citizens.
+    The application allows the user to access / filter / create / update / delete state bonuses and the categories to which they belong.
+  </p>
+
+  <br>
+  <br>
+
+  <h3 align="center">Preview</h3>
+
+  <a href="https://github.com/Auro-93/bonny-state-bonuses-laravel">
+    <img src="public/screenshots/overview.png" alt="site-homepage-overview">
+  </a>
+
+  <a href="https://github.com/Auro-93/bonny-state-bonuses-laravel">
+    <img src="public/screenshots/bonuses-table.png" alt="site-bonuses-table">
+  </a>
+
+  <a href="https://github.com/Auro-93/bonny-state-bonuses-laravel">
+    <img src="public/screenshots/create-category.png" alt="site-create-category">
+  </a>
+
 </p>
 
-## About Laravel
+<details open="open">
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#links-contacts">Links & Contacts</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+  </ol>
+</details>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## About The Project
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+User can perform various actions:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<ul>
+<li><strong>GET</strong> requests to access bonuses and categories </li>
+<li><strong>GET</strong> requests with params to filter bonuses by category and sale data range; </li>
+<li><strong>GET</strong> requests to access aggregate data about categories such as total, max and min saved minutes</li>
+<li><strong>POST</strong> requests to create bonuses and categories; </li>
+<li><strong>PUT</strong> requests to update bonuses and categories; </li>
+<li><strong>DELETE</strong> requests to delete bonuses and categories; </li>
+</ul>
 
-## Learning Laravel
+REST API project section endpoints:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<ul>
+<li><strong>GET</strong> /bonuses</li>
+<li><strong>GET</strong> /bonuses/{id}</li>
+<li><strong>POST</strong> /bonuses/store</li>
+<li><strong>PUT</strong> /bonuses/{id}/update</li>
+<li><strong>DELETE</strong> /bonuses/{id}/delete</li>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+<li><strong>GET</strong> /categories</li>
+<li><strong>GET</strong> /categories/{id}</li>
+<li><strong>POST</strong> /categories/store</li>
+<li><strong>PUT</strong> /categories/{id}/update</li>
+<li><strong>DELETE</strong> /categories/{id}/delete</li>
 
-## Laravel Sponsors
+<li><strong>GET</strong> /categories/aggregate/max-saved-minutes</li>
+<li><strong>GET</strong> /categories/aggregate/min-saved-minutes</li>
+<li><strong>GET</strong> /categories/aggregate/total-saved-minutes</li>
+</ul>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+### Built With
 
-## Contributing
+- [Laravel](https://laravel.com/)
+- [MySQL](https://www.mysql.com/)
+- [SASS](https://sass-lang.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Getting Started
 
-## Code of Conduct
+### Prerequisites
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Please check the official laravel installation guide for requirements before you start. [Official Documentation](https://laravel.com/docs/9.x/installation)
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Installation
+
+1. Clone the repository locally with the git command:
+
+   ```sh
+   git clone https://github.com/Auro-93/bonny-state-bonuses-laravel.git
+   ```
+
+2. Switch to the project folder:
+
+   ```sh
+   cd bonny-state-bonuses-laravel
+   ```
+
+3. Install composer dependencies:
+
+   ```sh
+   composer install
+   ```
+   
+4. Install NPM Dependencies:
+
+   ```sh
+   npm install
+   ```
+5. Copy the example env file and make the required configuration changes in the .env file:
+
+  ```sh
+   cp .env.example .env
+   ```
+ 6. Generate an app encryption key:
+    
+  ```sh
+   php artisan key:generate
+   ```
+ 7. Create an empty database for our application with your preferred tools (ex. phpMyAdmin or MySQL Workbench)  
+
+ 8. In the .env file, add database information to allow Laravel to connect to the database
+
+  In the .env file fill in the DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, and DB_PASSWORD options to match the credentials of the database you just created. 
+  
+ 9. Migrate the database 
+
+  ```sh
+   php artisan migrate
+   ```
+ 10. Seed the database with dummy data to test the app faster (optional):
+
+  ```sh
+   php artisan db:seed
+   ``` 
+ 11. Start the local development server:
+
+  ```sh
+     php artisan serve
+    ```  
+   You can now access the server at http://localhost:8000  
+    
+
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## Links & Contacts
+
+[@Aurora Sirigu](https://www.linkedin.com/in/aurora-sirigu-a001301b4/) - 93a.sirigu at gmail dot com
+
+Project Repository: [bonny-state-bonuses-laravel](https://github.com/Auro-93/bonny-state-bonuses-laravel)
+
+Project Website: [bonny-state-bonuses - Heroku](https://bonny-state-bonuses.herokuapp.com/)
+
+Portfolio: [aurodev-web-developer-portfolio](https://aurodev-web-developer-portfolio.netlify.app/)
+
+## Acknowledgements
+
+- [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
+- [Awesome README](https://github.com/matiassingers/awesome-readme)
+- [Laravel](https://laravel.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+
+
