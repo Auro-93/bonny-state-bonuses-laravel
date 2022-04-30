@@ -24,8 +24,10 @@ class BonusController extends Controller
     public function index(Request $request)
     {
         
+        //ALL CATEGORIES LIST
         $categories = Category::all();
 
+        // GET BONUSES WITH MULTI-FILTER PARAMS : CATEGORY, FROM DATE, TO DATE
         $bonuses = Bonus::query();
 
         $from = $request->from_date ? Carbon::createFromFormat('Y-m-d', $request->from_date) : NULL;
@@ -71,7 +73,10 @@ class BonusController extends Controller
 
     {
        
+        //VALIDATE REQUEST
         $request = $this->validateReq($request);
+
+        //CREATE CATEGORY
         Bonus::create($request->all());
         return back()->with('success', 'Bonus Successfully Created!');
     }
@@ -110,7 +115,11 @@ class BonusController extends Controller
     public function update(Request $request, $id)
     {
         $bonus = Bonus::find($id);
+
+        //VALIDATE REQUEST
         $request = $this->validateReq($request);
+
+        //UPDATE BONUS
         $bonus->update($request->all());
         return back()->with('success', 'Bonus Successfully Updated!');
     }
@@ -124,17 +133,22 @@ class BonusController extends Controller
     public function destroy($id)
     {
         $bonus = Bonus::find($id);
+
+        //DELETE BONUS
         $bonus->delete();
         return redirect()->route('bonuses.index')->with('success','Bonus Successfully Deleted');
     }
 
     public function validateReq(Request $request){
+
+        //VALIDATION RULE FOR UNIQUE CONSTRAINT ON COLUMNS name AND sold_at 
         $uniqueRule =  Rule::unique('bonuses')->where(function ($query) use ($request){
             $query->where('name', $request['name']);
             $query->where('sold_at', $request['sold_at']);
         });
 
 
+        //VALIDATION RULES
         $request->validate([
             'name' => ['required', 'max:255', $request->getMethod() === "POST" ? $uniqueRule : NULL],
             'category_id' => 'required|exists:categories,id',

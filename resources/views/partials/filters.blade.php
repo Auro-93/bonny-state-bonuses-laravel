@@ -1,5 +1,4 @@
-<form method="GET" action="{{ route('bonuses.index') }}"
-    class="search-form">
+<form method="GET" action="{{ route('bonuses.index') }}" class="search-form">
     @csrf
     <select name="category_id"
         class="shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
@@ -23,7 +22,7 @@
         class="shadow appearance-none border rounded text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
 
     <div class="flex justify-between my-4">
-        
+
         <button
             class="bg-emerald-500 hover:bg-emerald-700 text-white font-bold  py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2"
             type="submit">

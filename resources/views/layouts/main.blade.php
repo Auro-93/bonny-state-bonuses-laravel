@@ -16,27 +16,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&family=Square+Peg&display=swap"
         rel="stylesheet">
 
-    <link href="{{asset('css/app.css') }}" rel="stylesheet">
+    <?//CUSTOM STYLES?>
+    <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
     <title>@yield("title")</title>
 
 </head>
 
 <body class="antialiased">
 
+    <?//NAVBAR?>
 
     @include('partials.navbar')
 
+    <?//SIDEBAR?>
     @include('partials.sidebar')
 
 
     @yield("content")
 
-    <script src="{{ asset('js/app.js') }}"></script>
+    <?//JS SCRIPT?>
+    <script src="{{ secure_asset('js/app.js') }}"></script>
 
 
 
-
-@include("partials.footer")
+    <?//FOOTER?>
+    @include('partials.footer')
 </body>
 
 </html>

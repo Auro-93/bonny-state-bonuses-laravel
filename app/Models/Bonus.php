@@ -17,9 +17,4 @@ class Bonus extends Model
         'quantity_sold', 
         'sold_at', 
     ];
-
-    public function category()
-    {
-        return $this->belongsTo(Category::class);
-    }
 }

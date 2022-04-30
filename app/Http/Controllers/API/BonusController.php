@@ -25,14 +25,17 @@ class BonusController extends Controller
      */
     public function index(Request $request, ResponseController $response)
     {
-        $categories = Category::all();
+       
 
         $bonuses = Bonus::query();
 
+
+        //CONVERT from_date && to_date PARAMS TO MYSQL VALID DATE FORMAT
         $from = $request->from_date ? Carbon::createFromFormat('Y-m-d', $request->from_date) : NULL;
         $to =  $request->to_date ?  Carbon::createFromFormat('Y-m-d', $request->to_date) : NULL;
 
- 
+
+        //FILTER GET REQUEST THROUGH category, from_date && to_date FILTER PARAMS
         if ($request->filled('category_id')) {
             $bonuses->where('category_id', $request->input('category_id'));
         }
@@ -64,6 +67,7 @@ class BonusController extends Controller
      */
     public function store(Request $request, ResponseController $response)
     {
+        //VALIDATE REQUEST
         $validation = $this->rules($request);
 
         if($validation->fails()){
@@ -108,6 +112,7 @@ class BonusController extends Controller
         $bonus = Bonus::find($id);
 
         if($bonus){
+            //VALIDATE REQUEST
             $validation = $this->rules($request);
 
         if($validation->fails()){
@@ -148,17 +153,21 @@ class BonusController extends Controller
     }
 
     public function rules (Request $request){
+
+        //VALIDATION RULE FOR UNIQUE CONSTRAINT ON COLUMNS name AND sold_at 
         $uniqueRule =  Rule::unique('bonuses')->where(function ($query) use ($request){
             $query->where('name', $request['name']);
             $query->where('sold_at', $request['sold_at']);
         });
 
+        //CUSTOM ERROR MESSAGES
         $messages = [
             'name.unique' => 'The pair of values ​​provided for the "Name" and "Sold At" fields already exists in the database',
             'category_id.exists' => "The category_id value does not match any existing category"
         ];
         
 
+        //VALIDATION RULES
         $rules = [
             'name' => ['required', 'max:255', $request->getMethod() === "POST" ? $uniqueRule : NULL],
             'category_id' => 'required|numeric|exists:categories,id',

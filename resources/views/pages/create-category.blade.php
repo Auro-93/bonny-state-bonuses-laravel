@@ -12,11 +12,15 @@
                 @csrf
                 <h3 class="bg-red-500 text-white p-4 rounded-t text-center">CREATE CATEGORY</h3>
                 <div class=" py-8 px-6">
+
+                    <?//SUCCESS MESSAGE?>
                     @if (session()->has('success'))
                         <div class="success bg-emerald-200 rounded text-center">
                             {{ session()->get('success') }}
                         </div>
                     @endif
+
+                    <?//ERROR MESSAGES?>
                     @if ($errors->any())
                         @foreach ($errors->all() as $error)
                             <div class="error bg-red-200 rounded">

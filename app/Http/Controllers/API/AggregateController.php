@@ -17,6 +17,7 @@ class AggregateController extends Controller
       $categories = Category::first();
 
       if($categories){
+        // IF CATEGORIES IS NOT EMPTY RETURN CATEGORIES TOTAL SAVED MINUTES
         $total = ["total_saved_minutes" => Category::sum('saved_minutes')];
         return $response->sendResponse($total, "Data about categories saved_minutes sum Successfully Found.");  
       }else{
@@ -29,6 +30,7 @@ class AggregateController extends Controller
     $categories = Category::first();
 
     if($categories){
+      // IF CATEGORIES IS NOT EMPTY RETURN CATEGORY WITH MAX SAVED MINUTES 
         $max = Category::orderBy('saved_minutes', 'desc')->first();
       return $response->sendResponse($max, "Data about categories max saved_minutes Successfully Found.");  
     }else{
@@ -41,7 +43,9 @@ class AggregateController extends Controller
     $categories = Category::first();
 
     if($categories){
-        $min = Category::orderBy('saved_minutes', 'asc')->first();
+      
+      // IF CATEGORIES IS NOT EMPTY RETURN CATEGORY WITH MIN SAVED MINUTES 
+      $min = Category::orderBy('saved_minutes', 'asc')->first();
       return $response->sendResponse($min, "Data about categories min saved_minutes Successfully Found.");  
     }else{
       return $response->sendResponse(0, "Categories list is empty. Categories saved_minutes min: 0");  

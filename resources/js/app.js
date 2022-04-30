@@ -8,6 +8,8 @@ const container = document.querySelector(".custom-container");
 const errors = document.querySelectorAll(".error");
 const success = document.querySelector(".success");
 
+
+//TOGGLE SIDEBAR AND HAMBURGER MENU ICON  --- OPEN/CLOSE
 hamburgerIcon.addEventListener("click", (e) => {
     e.currentTarget.classList.toggle("change");
     if (sidebar.classList.contains("open")) {
@@ -26,6 +28,8 @@ container.addEventListener("click", () => {
     }
 });
 
+
+//ERROR AND SUCCESS MESSAGE TOAST FADE-OUT/CLOSING LOGIC
 if (errors && errors.length > 0) {
     errors.forEach((error) => {
         const closeBtn = error.children[0];

@@ -127,9 +127,7 @@ class CategoryController extends Controller
 
         $rules = [
             'name' => ['required',  Rule::unique('categories')->ignore($id), 'max:255'],
-            'saved_minutes' => 'required|numeric|min:1'
-
-           
+            'saved_minutes' => 'required|numeric|min:1'   
         ];
 
         $validator = Validator::make($request->all(), $rules);

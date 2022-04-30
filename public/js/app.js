@@ -2066,7 +2066,8 @@ var hamburgerIcon = document.querySelector("#menu-bar");
 var sidebar = document.querySelector(".sidebar");
 var container = document.querySelector(".custom-container");
 var errors = document.querySelectorAll(".error");
-var success = document.querySelector(".success");
+var success = document.querySelector(".success"); //TOGGLE SIDEBAR AND HAMBURGER MENU ICON  --- OPEN/CLOSE
+
 hamburgerIcon.addEventListener("click", function (e) {
   e.currentTarget.classList.toggle("change");
 
@@ -2083,7 +2084,7 @@ container.addEventListener("click", function () {
     sidebar.classList.remove("open");
     hamburgerIcon.classList.toggle("change");
   }
-});
+}); //ERROR AND SUCCESS MESSAGE TOAST FADE-OUT/CLOSING LOGIC
 
 if (errors && errors.length > 0) {
   errors.forEach(function (error) {

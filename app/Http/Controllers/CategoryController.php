@@ -20,6 +20,7 @@ class CategoryController extends Controller
     public function index()
     {
       
+        //GET ALL CATEGORIES 
         $categories = Category::paginate(4);
         return view("pages/categories", compact("categories"));
     }
@@ -42,7 +43,10 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
+        //VALIDATE REQUEST
         $request = $this->validateReq($request);
+
+        //CREATE CATEGORY
         Category::create($request->all());
         return back()->with('success', 'Category Successfully Created!');
     }
@@ -80,7 +84,11 @@ class CategoryController extends Controller
     public function update(Request $request, $id)
     {
         $category = Category::find($id);
+
+        //VALIDATE REQUEST
         $request = $this->validateReq($request, $id);
+
+        //UPDATE CATEGORY
         $category->update($request->all());
         return back()->with('success', 'Category Successfully Updated!');
     }
@@ -94,6 +102,8 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         $category = Category::find($id);
+
+        //DELETE CATEGORY
         $category->delete();
         return redirect()->route('categories.index')->with('success','Category Successfully Deleted');
        
@@ -101,6 +111,7 @@ class CategoryController extends Controller
 
     public function validateReq(Request $request, $id = NULL){
 
+        //VALIDATION RULES
         $request->validate([
             'name' => ['required',Rule::unique('categories')->ignore($id), 'max:255'],
             'saved_minutes' => 'required|numeric|min:1'
