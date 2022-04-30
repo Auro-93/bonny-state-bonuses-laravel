@@ -143,9 +143,8 @@ Please check the official laravel installation guide for requirements before you
 
 8.  In the .env file, add database information to allow Laravel to connect to the database
 
-```sh
-In the .env file fill in the DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, and DB_PASSWORD options to match the credentials of the database you just created.
-```
+    In the .env file fill in the DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, and DB_PASSWORD options to match the credentials of the database you just created.
+
 
 9.  Migrate the database
 
