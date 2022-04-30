@@ -17,7 +17,7 @@
         rel="stylesheet">
 
     <?//CUSTOM STYLES?>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
     <title>@yield("title")</title>
 
 </head>
@@ -35,7 +35,7 @@
     @yield("content")
 
     <?//JS SCRIPT?>
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ secure_asset('js/app.js') }}"></script>
 
 
 
