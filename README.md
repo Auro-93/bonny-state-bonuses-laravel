@@ -1,5 +1,3 @@
-<p align="center">
-
   <p align="center">
     <a href="https://github.com/Auro-93/bonny-state-bonuses-laravel">
         <img src="public/images/favicon.png" alt="Logo" width= "200" height = "200">
@@ -14,7 +12,7 @@
     Bonny is a fictional startup whose aim is to make state bonuses more accessible to citizens.
     The application allows the user to access / filter / create / update / delete state bonuses and the categories to which they belong.
   </p>  
-  </p>
+
 
   <br>
   <br>
@@ -32,8 +30,6 @@
   <a href="https://github.com/Auro-93/bonny-state-bonuses-laravel">
     <img src="public/screenshots/create-category.png" alt="site-create-category">
   </a>
-
-</p>
 
 <details open="open">
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
@@ -90,14 +86,12 @@ REST API project section endpoints:
 <li><strong>GET</strong> /categories/aggregate/total-saved-minutes</li>
 </ul>
 
-
-
 ### Built With
 
-- [Laravel](https://laravel.com/)
-- [MySQL](https://www.mysql.com/)
-- [SASS](https://sass-lang.com/)
-- [Tailwind CSS](https://tailwindcss.com/)
+-   [Laravel](https://laravel.com/)
+-   [MySQL](https://www.mysql.com/)
+-   [SASS](https://sass-lang.com/)
+-   [Tailwind CSS](https://tailwindcss.com/)
 
 ## Getting Started
 
@@ -105,68 +99,71 @@ REST API project section endpoints:
 
 Please check the official laravel installation guide for requirements before you start. [Official Documentation](https://laravel.com/docs/9.x/installation)
 
-
 ### Installation
 
 1. Clone the repository locally with the git command:
 
-   ```sh
-   git clone https://github.com/Auro-93/bonny-state-bonuses-laravel.git
-   ```
+    ```sh
+    git clone https://github.com/Auro-93/bonny-state-bonuses-laravel.git
+    ```
 
 2. Switch to the project folder:
 
-   ```sh
-   cd bonny-state-bonuses-laravel
-   ```
+    ```sh
+    cd bonny-state-bonuses-laravel
+    ```
 
 3. Install composer dependencies:
 
-   ```sh
-   composer install
-   ```
-   
+    ```sh
+    composer install
+    ```
+
 4. Install NPM Dependencies:
 
-   ```sh
-   npm install
-   ```
+    ```sh
+    npm install
+    ```
+
 5. Copy the example env file and make the required configuration changes in the .env file:
 
-  ```sh
-   cp .env.example .env
-   ```
- 6. Generate an app encryption key:
-    
-  ```sh
-   php artisan key:generate
-   ```
- 7. Create an empty database for our application with your preferred tools (ex. phpMyAdmin or MySQL Workbench)  
+```sh
+ cp .env.example .env
+```
 
- 8. In the .env file, add database information to allow Laravel to connect to the database
+6.  Generate an app encryption key:
 
-  ```sh
-  In the .env file fill in the DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, and DB_PASSWORD options to match the credentials of the database you just created. 
-   ```
-  
- 9. Migrate the database 
+```sh
+ php artisan key:generate
+```
 
-  ```sh
-   php artisan migrate
-   ```
- 10. Seed the database with dummy data to test the app faster (optional):
+7.  Create an empty database for our application with your preferred tools (ex. phpMyAdmin or MySQL Workbench)
 
-  ```sh
-   php artisan db:seed
-   ``` 
- 11. Start the local development server:
+8.  In the .env file, add database information to allow Laravel to connect to the database
 
-  ```sh
-     php artisan serve
-   ```    
-   You can now access the server at http://localhost:8000  
-    
+```sh
+In the .env file fill in the DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, and DB_PASSWORD options to match the credentials of the database you just created.
+```
 
+9.  Migrate the database
+
+```sh
+ php artisan migrate
+```
+
+10. Seed the database with dummy data to test the app faster (optional):
+
+```sh
+ php artisan db:seed
+```
+
+11. Start the local development server:
+
+```sh
+   php artisan serve
+```
+
+You can now access the server at http://localhost:8000
 
 ## License
 
@@ -184,9 +181,7 @@ Portfolio: [aurodev-web-developer-portfolio](https://aurodev-web-developer-portf
 
 ## Acknowledgements
 
-- [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
-- [Awesome README](https://github.com/matiassingers/awesome-readme)
-- [Laravel](https://laravel.com/)
-- [Tailwind CSS](https://tailwindcss.com/)
-
-
+-   [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
+-   [Awesome README](https://github.com/matiassingers/awesome-readme)
+-   [Laravel](https://laravel.com/)
+-   [Tailwind CSS](https://tailwindcss.com/)
