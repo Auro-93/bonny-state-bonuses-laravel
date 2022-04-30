@@ -162,7 +162,7 @@ Please check the official laravel installation guide for requirements before you
 
   ```sh
      php artisan serve
-    ```  
+   ```    
    You can now access the server at http://localhost:8000  
     
 
