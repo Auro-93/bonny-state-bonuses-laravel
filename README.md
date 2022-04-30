@@ -2,7 +2,7 @@
 
   <p align="center">
     <a href="https://github.com/Auro-93/bonny-state-bonuses-laravel">
-        <img src="public/images/favicon.png" alt="Logo" width= "500" height = "500">
+        <img src="public/images/favicon.png" alt="Logo" width= "500px" height = "500px">
     </a>
    </p>
   
@@ -13,6 +13,7 @@
     A project developed in Laravel and MySQL that includes two functionalities: a REST API and a web app.
     Bonny is a fictional startup whose aim is to make state bonuses more accessible to citizens.
     The application allows the user to access / filter / create / update / delete state bonuses and the categories to which they belong.
+  </p>  
   </p>
 
   <br>
