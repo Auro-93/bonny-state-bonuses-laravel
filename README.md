@@ -2,7 +2,7 @@
 
   <p align="center">
     <a href="https://github.com/Auro-93/bonny-state-bonuses-laravel">
-        <img src="public/images/favicon.png" alt="Logo" width= "500px" height = "500px">
+        <img src="public/images/favicon.png" alt="Logo" width= "200" height = "200">
     </a>
    </p>
   
